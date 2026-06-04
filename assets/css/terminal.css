@@ -1,0 +1,161 @@
+/* style.css - Retro Terminal Edition */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+    --bg-color: #020a02;
+    --term-green: #33ff00;
+    --term-green-dim: #1a6600;
+    --term-glow: 0 0 8px rgba(51, 255, 0, 0.6);
+    --term-font: 'VT323', 'Courier New', Courier, monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--term-green);
+    font-family: var(--term-font);
+    font-size: 1.3rem;
+    line-height: 1.4;
+    text-shadow: var(--term-glow);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-transform: uppercase;
+}
+
+body::after {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.25) 50%
+    );
+    background-size: 100% 4px;
+    z-index: 999;
+    pointer-events: none;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.95; }
+    5% { opacity: 0.85; }
+    10% { opacity: 0.95; }
+    15% { opacity: 1; }
+    100% { opacity: 1; }
+}
+body {
+    animation: flicker 4s infinite;
+}
+
+nav {
+    border: 2px solid var(--term-green);
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 95%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    background: rgba(2, 10, 2, 0.8);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+a {
+    color: var(--term-green);
+    text-decoration: none;
+}
+
+a:hover, a.active {
+    background-color: var(--term-green);
+    color: var(--bg-color);
+    text-shadow: none;
+}
+
+main {
+    flex: 1;
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.terminal-box {
+    border: 2px solid var(--term-green);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    color: var(--term-green);
+    border-bottom: 1px dashed var(--term-green-dim);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    border: 1px solid var(--term-green);
+    padding: 1.5rem;
+    transition: background-color 0.2s;
+}
+
+.card:hover {
+    background-color: rgba(51, 255, 0, 0.1);
+    cursor: crosshair;
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--term-green);
+    color: var(--bg-color);
+    padding: 0 0.5rem;
+    margin-right: 0.5rem;
+    text-shadow: none;
+    font-size: 1.1rem;
+}
+
+.blink {
+    animation: blinker 1s step-end infinite;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px dashed var(--term-green-dim);
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+}

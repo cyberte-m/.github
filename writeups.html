@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cyberte@m — WIKI</title>
+    <link rel="stylesheet" href="assets/css/terminal.css">
+    <style>
+        .card a { display: block; height: 100%; }
+        .card a:hover { background: none; color: inherit; text-shadow: inherit; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <span class="logo">[ cyberte@m ]</span>
+        <div class="nav-links">
+            <a href="index.html">/ROOT
+            <a href="man.html">/MAN</a>
+            <a href="whoami.html">/WHOAMI</a>
+            <a href="writeups/index.html" class="active">/WRITE-UPS</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="terminal-box">
+            <h1>> KNOWLEDGE_BASE<span class="blink">_</span></h1>
+            <p>BIBLIOTHÈQUE DE DOCUMENTATION INTERNE, D'OUTILS ET DE WRITE-UPS CLASSÉS PAR DOMAINE.</p>
+        </div>
+
+        <h2>>_ CATÉGORIES</h2>
+
+        <div class="grid">
+            <div class="card">
+                <h3>[ PWN ]</h3>
+                <p>BUFFER OVERFLOWS, ROP CHAINS, HEAP EXPLOITATION, FORMAT STRINGS. TOUT POUR PRENDRE LE CONTRÔLE DU POINTEUR D'INSTRUCTION.</p>
+                <br>
+                <span class="tag">BOF</span>
+                <span class="tag">ROP</span>
+                <span class="tag">HEAP</span>
+            </div>
+            <div class="card">
+                <h3>[ REVERSE ]</h3>
+                <p>DÉSASSEMBLAGE, ANALYSE DYNAMIQUE AVEC GDB/GHIDRA, CRACKMES, ANALYSE DE MALWARE, BYPASS ANTI-REVERSE.</p>
+                <br>
+                <span class="tag">GHIDRA</span>
+                <span class="tag">GDB</span>
+            </div>
+            <div class="card">
+                <h3>[ WEB ]</h3>
+                <p>INJECTIONS SQL, XSS, SSRF, DESERIALIZATION, CONTOURNEMENT WAF, EXPLOITATION D'API, JWT ATTACKS.</p>
+                <br>
+                <span class="tag">WEB</span>
+                <span class="tag">API</span>
+            </div>
+            <div class="card">
+                <h3>[ CRYPTO ]</h3>
+                <p>ATTAQUES RSA, CRYPTOGRAPHIE ELLIPTIQUE, FAIBLESSES D'IMPLÉMENTATION, PRNG, HASH COLLISIONS.</p>
+                <br>
+                <span class="tag">RSA</span>
+                <span class="tag">ECC</span>
+            </div>
+            <div class="card">
+                <h3>[ FORENSICS ]</h3>
+                <p>ANALYSE DE MÉMOIRE VOLATILE, DUMP DISK, PCAP, LOGS, RECONSTITUTION D'ATTAQUE, STEGANOGRAPHY.</p>
+                <br>
+                <span class="tag">MEMDUMP</span>
+                <span class="tag">STEGO</span>
+            </div>
+            <div class="card">
+                <h3>[ OSINT ]</h3>
+                <p>RECONNAISSANCE, COLLECTE D'INFORMATION, ANALYSE DE MÉTADONNÉES, GÉOLOCALISATION, SOCIAL NETWORK INTELLIGENCE.</p>
+                <br>
+                <span class="tag">OSINT</span>
+                <span class="tag">RECON</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>EOF. SYSTEM HALTED. (C) 2026 CYBERTE@M CTF ENGINEERING COLLECTIVE.</p>
+    </footer>
+
+    <script src="assets/js/typewriter.js"></script>
+</body>
+</html>

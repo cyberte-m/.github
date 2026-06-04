@@ -1,0 +1,52 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cyberte@m — WRITEUPS</title>
+    <link rel="stylesheet" href="../assets/css/terminal.css">
+</head>
+<body>
+
+    <nav>
+        <span class="logo">[ cyberte@m ]</span>
+        <div class="nav-links">
+            <a href="../index.html">/HOME</a>
+            <a href="../about.html">/ABOUT</a>
+            <a href="../wiki.html" class="active">/WIKI</a>
+            <a href="../team.html">/TEAM</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="terminal-box">
+            <h1>> WRITEUPS<span class="blink">_</span></h1>
+            <p>SOLUTIONS DÉTAILLÉES DE CHALLENGES CTF, CLASSÉES PAR DIFFICULTÉ ET PAR DOMAINE.</p>
+        </div>
+
+        <h2>>_ RÉCENT</h2>
+
+        <div class="grid">
+            {% for writeup in site.writeups reversed %}
+            <div class="card">
+                <h3><a href="{{ writeup.url | relative_url }}" style="color: inherit;">{{ writeup.title }}</a></h3>
+                <p>{{ writeup.description }}</p>
+                <br>
+                {% for tag in writeup.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+
+    <footer>
+        <p>EOF. SYSTEM HALTED. (C) 2026 CYBERTE@M CTF ENGINEERING COLLECTIVE.</p>
+    </footer>
+
+    <script src="../assets/js/typewriter.js"></script>
+</body>
+</html>

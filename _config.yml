@@ -1,0 +1,30 @@
+title: cyberte@m
+description: CTF Engineering Collective — Standardizing the art of exploitation
+lang: fr_FR
+encoding: UTF-8
+
+# Jekyll
+markdown: GFM
+permalink: /writeups/:title/
+exclude:
+  - README.md
+  - .gitignore
+  - .github/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+
+collections:
+  writeups:
+    output: true
+    permalink: /writeups/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: writeups
+    values:
+      layout: writeup
+
+# Pas de thème — on utilise notre propre CSS
+theme: null
